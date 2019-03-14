@@ -1,20 +1,18 @@
-def my_sort():
-    d = {'even': [], 'odd' : [],'chars': { 'char' :[]}}
-    
-    list_sort = 'z','a',2,0,6,5,1,7
-    for i in list_sort :
-       if i is str:
-               if  i % 2 !=0:
-                d['odd'].append(i)
-        else:         
-                 
-                d['even'].append(i)
 
+
+def my_sort():
+    d = {'even': [], 'odd' : [],'chars': []}
+    
+    list_sort = [2,0,6,5,1,7,'z','a']
+    for i in list_sort:
+        if isinstance(i,str):
                 d['chars'].append(i)
-    
-    
-    print()   
-        
+        elif isinstance(i,int):
+                if i % 2 !=0:
+                        d['odd'].append(i)
+                elif i % 2 == 0:
+                        d['even'].append(i)
+    print(d)  
 my_sort()
    
        
